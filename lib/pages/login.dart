@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_login/components/MyButton.dart';
 import 'package:flutter_login/components/MyTextField.dart';
 import 'package:flutter_login/components/square.dart';
+import 'package:flutter_login/services/auth_service.dart';
 
 class Login extends StatefulWidget
 {
@@ -125,7 +126,8 @@ class _LoginState extends State<Login> {
                         child: Text('Or Continue With',
                         style: TextStyle(
                           color: Colors.grey[700],
-                        ),),
+                        ),
+                        ),
                       ),
                       Expanded(
                         child: Divider(
@@ -137,14 +139,18 @@ class _LoginState extends State<Login> {
                   ),
                 ),
                 const SizedBox(height: 50,),
-                const Row(
+                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     // Google Button
-                    SquareTile(imagePath: 'assets/google.png',),
-                    SizedBox(width: 15,),
+                    SquareTile(
+                      onTap: () => AuthService().signInWithGoogle(),
+                      imagePath: 'assets/google.png',
+                    ),
+                    const SizedBox(width: 15,),
                     // Apple Button
-                    SquareTile(imagePath: 'assets/apple.png',),
+                    SquareTile(imagePath: 'assets/apple.png', onTap: () {},
+                    ),
                   ],
                 ),
                 const SizedBox(height: 50,),

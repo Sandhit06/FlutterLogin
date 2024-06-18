@@ -140,17 +140,17 @@ class _LoginState extends State<register> {
                   ),
                 ),
                 const SizedBox(height: 50,),
-                const Row(
+                /*const Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     // Google Button
-                    SquareTile(imagePath: 'assets/google.png',),
+                    SquareTile(imagePath: 'assets/google.png', onTap: () {  },),
                     SizedBox(width: 15,),
                     // Apple Button
                     SquareTile(imagePath: 'assets/apple.png',),
                   ],
                 ),
-                const SizedBox(height: 50,),
+                const SizedBox(height: 50,),*/
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
